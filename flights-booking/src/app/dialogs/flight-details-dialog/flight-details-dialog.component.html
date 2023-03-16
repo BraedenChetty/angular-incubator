@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Flight Details</h1> 
+<br>
+
+<div mat-dialog-content style="display: flex;">
+    <mat-card class="left" style="flex: 1 1 auto;" >
+        <mat-label>One Way Flight : {{this.data[0].origin}}-  {{this.data[0].destination}}</mat-label>
+        <br>
+        <mat-label>Flight Number:   {{this.data[0].flightNumber}}</mat-label>
+        <br>
+        <mat-label>Departure:{{this.data[0].departureTime}}</mat-label>
+        <br>
+        <mat-label>Arrival:{{this.data[0].arrivalTime}}</mat-label>
+    </mat-card>
+
+
+    <mat-card class="right"style="flex: 1 1 auto;">
+        <mat-label>Available Seats Number : {{this.data[0].seatsAvailable}}</mat-label>
+        <br>
+        <mat-label>Seat Cost:   {{this.data[0].seatCost}}</mat-label>
+        <br>
+    </mat-card>
+</div> 
+
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="accent" (click)="addBooking()">Book This Flight</button>
+    <button mat-raised-button color="warn" style="margin-right: 10px;" mat-dialog-close="">Close</button>
+</div>
