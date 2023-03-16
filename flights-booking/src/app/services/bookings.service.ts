@@ -9,7 +9,7 @@ export class BookingsService {
 
   constructor(private http: HttpClient) { }
 
-  addBooking(id1: any,id2:any){
-    return this.http.post('http://localhost:8080/bookings', [id1, id2]);
+  addBooking(data: any){
+    return this.http.post('http://localhost:8080/bookings', data);
   }
 }
