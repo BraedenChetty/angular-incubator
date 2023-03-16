@@ -40,9 +40,8 @@ import { HomeComponent } from './home/home.component';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: '', component: LoginComponent, pathMatch: 'full' },
+      { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'signup', component: SignupComponent },
-      // { path: 'home', component: HomeComponent },
       // { path: 'stocks', component: NewStockComponent },
       // { path: 'vouchers', component: NewVouchersComponent },
       // { path: 'suppliers', component: NewSuppliersComponent },
