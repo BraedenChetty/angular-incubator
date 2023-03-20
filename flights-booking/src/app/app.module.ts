@@ -8,7 +8,10 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './customer/login/login.component';
-import { SignupComponent } from './customer/signup/signup.component';
+import { DetailsComponent } from './customer/details/details.component';
+
+import {CustomerDialogComponent} from './dialogs/customer-dialog/customer-dialog.component';
+import {FlightDetailsDialogComponent} from './dialogs/flight-details-dialog/flight-details-dialog.component'
 
 //Angular Material Components
 import { MatTableModule } from '@angular/material/table';
@@ -25,12 +28,15 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent,
-    HomeComponent
+    DetailsComponent,
+    HomeComponent,
+    CustomerDialogComponent,
+    FlightDetailsDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,7 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'signup', component: SignupComponent },
+    //  { path: 'Details', component: DetailsComponent },
       // { path: 'stocks', component: NewStockComponent },
       // { path: 'vouchers', component: NewVouchersComponent },
       // { path: 'suppliers', component: NewSuppliersComponent },
@@ -51,7 +57,10 @@ import { HomeComponent } from './home/home.component';
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
+    MatDialogModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

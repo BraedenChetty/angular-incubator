@@ -1,0 +1,11 @@
+.title-component{
+    background-color: white; 
+    height: 50px;
+    width: parent;
+}
+
+.title-h1{
+    color: rgb(255, 0, 149);
+    text-align:center;
+    font-family: "Lucida Console";
+}
