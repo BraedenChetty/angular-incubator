@@ -1,15 +1,10 @@
 import { Component, Input,Output, OnInit, ViewChild } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { FlightService } from '../services/flight.service';
 import { CustomerDialogComponent } from '../dialogs/customer-dialog/customer-dialog.component';
-import { DetailsComponent } from '../customer/details/details.component';
 import { Flight } from '../model/flight';
 import { MatTableDataSource } from '@angular/material/table'
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { NavigationExtras, Router } from '@angular/router';
-import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
@@ -28,6 +23,9 @@ export class HomeComponent implements OnInit {
     this.getAllFlights();
   }
 
+  login(){
+    this.router.navigate(['login']);
+  }
   
   getAllFlights(){
     this.flightService.getAllFlights().subscribe({

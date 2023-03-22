@@ -1,4 +1,4 @@
-.title-component{
+/* .title-component{
     background-color: white; 
     height: 50px;
     width: parent;
@@ -8,4 +8,10 @@
     color: rgb(255, 0, 149);
     text-align:center;
     font-family: "Lucida Console";
+} */
+
+img {
+    width: 75px;
+    height: 75px;
+    object-fit: none;
 }
